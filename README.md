@@ -80,13 +80,13 @@ The weak Vdd input is created from the internal pull-up resistors on the device.
 
 ### Transitioning
 
-When moving from GND to Vdd, the parasitic capacitance of the pin and connected circuits causes it to transition slowly.
+When moving from GND to Vdd, the parasitic capacitance of the pin and connected circuits causes it to transition slowly.<br>
 
-<img src="images/io_slow.png">
+<img src="images/io_slow.png"><br>
 
-To accelerate the process, the device briefly turns on the high-side I/O driver to help recharge the parasitic capacitance.
+To accelerate the process, the device briefly turns on the high-side I/O driver to help recharge the parasitic capacitance.<br>
 
-<img src="images/io_fast.png">
+<img src="images/io_fast.png"><br>
 
 The number of wait loops that the I/O driver runs for is specified in *config.h*. For simplicity, the I<sup>2</sup>C interrupt is used to block during this time, as the delay is very brief. The constant `DELAY_COUNT` in *config.h* represents the number of iterations.
 
