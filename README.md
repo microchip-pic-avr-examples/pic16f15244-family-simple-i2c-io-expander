@@ -28,6 +28,7 @@ This code example demonstrates the use of the PIC16-152 family of parts to build
 **Important:**
 1. RC0 is connected to a potentiometer on RC0. This may cause the pin to be stuck at Vdd/Vss.<br>
 2. RC1 is connected to the mTouch(TM) button. It is possible to couple enough charge through this button to trigger the IOC circuit on this pin.
+3. RC5 is used as an LED. The weak pull-up current may go through this LED, causing unexpected behavior in devices that use the weak pull-up.
 
 ### With the Curiosity Nano (PIC16F15244)
 
@@ -56,6 +57,8 @@ On the PIC16-152, the default positions for the pins and ports are:
 | ADDR1     | RA1
 | ADDR2     | RA2
 | I/O       | PORTC
+
+*Important! The addressing lines are only sampled on Power-up. If the address needs to be updated at run-time, then a RESET of the microcontroller is required.*
 
 ## I<sup>2</sup>C Default settings
 
@@ -122,5 +125,4 @@ If any pin changes I/O state, then the INT line is asserted to '0'. This only ap
 In *config.h*, the INT line can be configured as Open-Drain or as Push-Pull. In Push-Pull, logic 0 is still used as asserted, and logic 1 is used as not asserted.
 
 ## Summary
-
-<!-- Summarize what the example has shown -->
+This code example demonstrates the utility of parts such as the PIC16-152 in ultra-low cost applications where flexibility is key.

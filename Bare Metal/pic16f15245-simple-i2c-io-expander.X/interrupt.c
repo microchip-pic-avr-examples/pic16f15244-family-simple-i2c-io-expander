@@ -117,7 +117,6 @@ void __interrupt() ISR(void)
 {
     if (PIR0bits.IOCIF)     //IOC
     {
-        //Set the IOC flags
         clearIOCinterrupt();
         assert_INT();                 //Assert the INT signal
     }

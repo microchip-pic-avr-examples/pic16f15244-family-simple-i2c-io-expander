@@ -65,7 +65,7 @@ extern "C" {
 //INT Pin Settings
     
 //Comment out this line to disable OPEN DRAIN for INT PIN
-//#define ENABLE_OPEN_DRAIN
+#define ENABLE_OPEN_DRAIN
     
 #define INT_LAT     LATA5
 #define INT_TRIS    TRISA5
