@@ -72,8 +72,8 @@ void main(void) {
      event occurs in I2C, the STOP bit will be set, which will enable power
      saving sleep all the time. */
     
-//    SLEEP();
-//    __asm("NOP");
+    SLEEP();
+    __asm("NOP");
     
     while (1)
     {
@@ -81,8 +81,8 @@ void main(void) {
         if (isActive_n())
         {
             //Sleep
-//            SLEEP();
-//            __asm("NOP");        
+            SLEEP();
+            __asm("NOP");        
         }
         
     }    
