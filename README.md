@@ -29,7 +29,7 @@ This code example demonstrates the use of the PIC16-152 family of parts to build
 1. RC0 is connected to a potentiometer on RC0. This may cause the pin to be stuck at Vdd/Vss.<br>
 2. RC1 is connected to the mTouch(TM) button. It is possible to couple enough charge through this button to trigger the IOC circuit on this pin.
 3. RC5 is one of the LEDs on-board. The weak pull-up current may go through this LED, causing unexpected behavior in devices that use the weak pull-up.
-4. RA5 is another one of the LEDs on-board. The open-drain line isn't strong enough to hold the line with this LED. Disabling OPEN DRAIN on the INT pin will resolve the issue. 
+4. RA5 is another one of the LEDs on-board. The open-drain line isn't strong enough to hold the line with this LED. Disabling OPEN DRAIN on the INT pin will resolve the issue.
 
 ### With the Curiosity Nano (PIC16F15244)
 
@@ -99,11 +99,9 @@ The number of wait loops that the I/O driver runs for is specified in *config.h*
 <img src="images/noBooster.PNG"><br>
 *No Delay (natural rise time)*<br>
 <img src="images/10cycle.PNG"><br>
-*Delay constant of 10*<br>
-<img src="images/20cycle.PNG"><br>
-*Delay constant of 20*<br>
+*Delay constant of 10 - Note the change in time base from 20us to 40ns*<br>
 
-For the images above, a capacitor of 4.7uF was attached to the I/O pin. **This is an extreme case to demonstrate the differences in delay time.**
+For the images above, a 1nF capacitor was attached to the I/O pin. **This is an extreme case to demonstrate the differences in delay time. It is not recommended to directly drive a capacitor with the I/O pin.**
 
 ## Communication
 The simplified nature of this example means that the I<sup>2</sup>C write and read operations represent the only 2 possible operations.
