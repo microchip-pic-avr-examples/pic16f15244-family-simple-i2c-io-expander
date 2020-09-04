@@ -1,3 +1,30 @@
+/*
+ * main.c
+ *
+ * Code example to create a simulate I/O Expander for the PIC16F15244 family.
+ *
+
+ (c) 2020 Microchip Technology Inc. and its subsidiaries.
+
+    Subject to your compliance with these terms,you may use this software and
+    any derivatives exclusively with Microchip products.It is your responsibility
+    to comply with third party license terms applicable to your use of third party
+    software (including open source software) that may accompany Microchip software.
+
+    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
+    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
+    WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+    PARTICULAR PURPOSE.
+
+    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
+    BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
+    FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
+    ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
+    THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *
+ */
 
 // PIC16F15245 Configuration Bit Settings
 
@@ -45,36 +72,36 @@
 #include "utility.h"
 
 void main(void) {
-    
+
     //Run at 4MHz for 100kHz I2C
     SET_OSC_FREQ(0b010);
 
     //Init IO for Port Expansion
     initIO();
-    
+
     //Init I2C for Communication
     initI2C();
-    
+
     //Init FSM
     init_I2C_FSM();
-            
+
     //Enable rising and falling IOC events for all pins
     enableIOCinterrupts_PORT_pos_pins(0xFF);
     enableIOCinterrupts_PORT_neg_pins(0xFF);
-    
+
     //Enable IOC
     enableIOCinterrupt();
-        
+
     //Enable Interrupts
     enableInterrupts();
-                
+
     /*When the 1st I2C activity occurs, it will enter while(1). When the STOP
      event occurs in I2C, the STOP bit will be set, which will enable power
      saving sleep all the time. */
-    
+
     SLEEP();
     __asm("NOP");
-    
+
     while (1)
     {
         //I2C Idle
@@ -82,9 +109,9 @@ void main(void) {
         {
             //Sleep
             SLEEP();
-            __asm("NOP");        
+            __asm("NOP");
         }
-        
-    }    
+
+    }
     return;
 }

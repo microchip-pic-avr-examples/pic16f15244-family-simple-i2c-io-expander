@@ -1,13 +1,13 @@
 <!-- Please do not change this html logo with link -->
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
-# Simple I<sup>2</sup>C I/O Expander with PIC16F15245
-This code example demonstrates the use of the PIC16-152 family of parts to build a simple 8-bit I/O expander that is optimized for I<sup>2</sup>C control.
+# Simple I<sup>2</sup>C I/O Expander with PIC16F15244 Family
+This code example demonstrates the use of the PIC16F15244 family of parts to build a simple 8-bit I/O expander that is optimized for I<sup>2</sup>C control.
 
 ## Related Documentation
 
-* <a href="https://www.microchip.com/wwwproducts/en/PIC16F15245">PIC16F15245 Documentation</a>
-* <a href="https://github.com/microchip-pic-avr-examples/pic16f15245-advanced-i2c-io-expander">Code Example: Advanced I/O Expander with the PIC16F15245</a>
+* <a href="https://onlinedocs.microchip.com/pr/GUID-632C0460-65B2-4F1E-8D1A-B760EB793F79-en-US-4/index.html">PIC16F15244 Family Datasheet</a>
+* <a href="https://github.com/microchip-pic-avr-examples/pic16f15244-family-advanced-i2c-io-expander">Code Example: Advanced I/O Expander with the PIC16F15244 Family</a>
 
 ## Software Used
 
@@ -21,28 +21,29 @@ This code example demonstrates the use of the PIC16-152 family of parts to build
 
 * <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ADM00559"> I<sup>2</sup>C Master Device (or for easy testing, an MCP2221A USB-UART/I<sup>2</sup>C breakout module, PN: ADM00559)</a>
 
-### With the PIC16F15245 on a Curiosity LPC Board
+### With the PIC16F15244 family part on a Curiosity LPC Board
 
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Low Pin Count Curiosity, PN: DM164137</a><br><br>
 
-**Important:**
-1. RC0 is connected to a potentiometer on RC0. This may cause the pin to be stuck at Vdd/Vss.<br>
-2. RC1 is connected to the mTouch(TM) button. It is possible to couple enough charge through this button to trigger the IOC circuit on this pin.
-3. RC5 is one of the LEDs on-board. The weak pull-up current may go through this LED, causing unexpected behavior in devices that use the weak pull-up.
-4. RA5 is another one of the LEDs on-board. The open-drain line isn't strong enough to hold the line with this LED. Disabling OPEN DRAIN on the INT pin will resolve the issue.
+**Important:**<br>
+Many of the RCx pins are used for other functions on the board. For proper operation on all pins, it is recommended to remove the small jumpers on the back of the board correlating to these features. Soldering pin headers to the nearby unpopulated area will allow 2x1 jumpers to re-enable features such as the LEDs, potentiometer, and touch button for future projects.
 
 ### With the Curiosity Nano (PIC16F15244)
 
 * <a href="#"> Microchip Curiosity Nano, PN: ???</a>
 
-**Important setup instructions:**
-1. Change the build configuration to the appropriate configuration ending with PIC16F15244.<br>
+**Important:** On the back of the Curiosity Nano, cut the jumper tracks for RC2, RC0, and RC1 to the debugger.
+
+### Solution Setup
+
+1. Change the build configuration to the appropriate configuration ending with the part number on the board.<br>
+  * If you have a license for a PRO compiler, select the PRO configuration to enable code optimizations.
 
 <img src="images/configurationChange.PNG"><br>
 
 2. Run Build and Clean on the project. (Hammer + Broom on the toolbar).  
 
-## Setup
+## Wiring Setup
 
 <img src="images/schematic.png" width="500px"><br>
 *Figure 1 - Electrical Configuration of device. Shown with Address Lines tied to GND.*<br>
@@ -53,7 +54,7 @@ On the PIC16-152, the default positions for the pins and ports are:
 | --------- | ----
 | SDA       | RB4
 | SCL       | RB6
-| INT       | RB5
+| INT       | RB4
 | ADDR0     | RA0
 | ADDR1     | RA1
 | ADDR2     | RA2
