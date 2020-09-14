@@ -11,28 +11,28 @@ This code example demonstrates the use of the PIC16F15244 family of parts to bui
 
 ## Software Used
 
-* <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
-* <a href="https://www.microchip.com/mplab/compilers">Microchip XC8 Compiler 2.20 or newer</a>
-* PIC16F1xxxx_DFP v1.4.119
+* <a href="http://www.microchip.com/mplab/mplab-x-ide?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C">MPLAB® IDE 5.40 or newer</a>
+* <a href="https://www.microchip.com/mplab/compilers?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C">Microchip XC8 Compiler 2.20 or newer</a>
+* <a href="https://packs.download.microchip.com/">PIC16F1xxxx_DFP v1.4.119</a>
 
 ## Hardware Used
 
 ### Common Components
 
-* <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ADM00559"> I<sup>2</sup>C Master Device (or for easy testing, an MCP2221A USB-UART/I<sup>2</sup>C breakout module, PN: ADM00559)</a>
+* <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ADM00559?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C"> I<sup>2</sup>C Master Device (or for easy testing, an MCP2221A USB-UART/I<sup>2</sup>C breakout module, PN: ADM00559)</a>
 
 ### With the PIC16F15244 family part on a Curiosity LPC Board
 
-* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Low Pin Count Curiosity, PN: DM164137</a><br><br>
+* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C"> Microchip Low Pin Count Curiosity, PN: DM164137</a><br><br>
 
 **Important:**<br>
 Many of the RCx pins are used for other functions on the board. For proper operation on all pins, it is recommended to remove the small jumpers on the back of the board correlating to these features. Soldering pin headers to the nearby unpopulated area will allow 2x1 jumpers to re-enable features such as the LEDs, potentiometer, and touch button for future projects.
 
 ### With the Curiosity Nano (PIC16F15244)
 
-* <a href="#"> Microchip Curiosity Nano, PN: ???</a>
+* <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/EV09Z19A?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C"> Microchip Curiosity Nano, PN: EV09Z19A</a>
 
-**Important:** On the back of the Curiosity Nano, cut the jumper tracks for RC2, RC0, and RC1 to the debugger.
+**Important:** The debugger UART TX trace may interfere with the I/O Expander in some cases. Cutting this trace (located on the underside of the Nano) will resolve the issue.
 
 ### Solution Setup
 
