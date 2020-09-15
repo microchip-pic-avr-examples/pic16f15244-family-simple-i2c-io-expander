@@ -125,4 +125,4 @@ If any pin changes I/O state, then the INT line is asserted to '0'. This only ap
 In *config.h*, the INT line can be configured as Open-Drain or as Push-Pull. In Push-Pull, logic 0 is still used as asserted, and logic 1 is used as not asserted.
 
 ## Summary
-This code example demonstrates the utility of parts such as the PIC16-152 in ultra-low cost applications where flexibility is key.
+This code example demonstrates using the PIC16F15244 family of devices to act as an I/O Expander. The I/O expander can be used to increase the amount of I/O available to the main microcontroller, reduce the main microcontroller's power dissipation, and to simplify PCB routing. 
