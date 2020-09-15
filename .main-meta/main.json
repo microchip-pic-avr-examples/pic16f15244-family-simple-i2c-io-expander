@@ -3,7 +3,7 @@
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.1.0",
-        "name": "com.microchip.mcu8.mplabx.project.pic16f15245-simple-i2c-io-expander",
+        "name": "com.microchip.mcu8.mplabx.project.pic16f15244-family-simple-i2c-io-expander",
         "version": "1.0.0",
         "displayName": "Simple I/O Expander with PIC16F15244 Family",
         "projectName": "pic16f15244-family-simple-i2c-io-expander",
@@ -32,7 +32,7 @@
             "content": {
                 "metaDataVersion": "1.0.0",
                 "category": "com.microchip.device",
-                "name": "PIC16F15245",
+                "name": "PIC16F15244",
                 "versionRange": "*"
             }
         },
