@@ -7,6 +7,7 @@ This code example demonstrates the use of the PIC16F15244 family of parts to bui
 ## Related Documentation
 
 * <a href="https://onlinedocs.microchip.com/pr/GUID-632C0460-65B2-4F1E-8D1A-B760EB793F79-en-US-4/index.html">PIC16F15244 Family Datasheet</a>
+* <a href="https://www.youtube.com/watch?v=nHLv3Th-o-s"> Introduction to the PIC16F15244 MCU Family Video</a>
 * <a href="https://github.com/microchip-pic-avr-examples/pic16f15244-family-advanced-i2c-io-expander">Code Example: Advanced I/O Expander with the PIC16F15244 Family</a>
 
 ## Software Used
@@ -23,7 +24,7 @@ This code example demonstrates the use of the PIC16F15244 family of parts to bui
 
 ### With the PIC16F15244 family part on a Curiosity LPC Board
 
-* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C_IOExpander"> Microchip Low Pin Count Curiosity, PN: DM164137</a><br><br>
+* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C_IOExpander"> Microchip Low Pin Count Curiosity, PN: DM164137 (Rev 4)</a><br><br>
 
 **Important:**<br>
 Many of the RCx pins are used for other functions on the board. For proper operation on all pins, it is recommended to remove the small jumpers on the back of the board correlating to these features. Soldering pin headers to the nearby unpopulated area will allow 2x1 jumpers to re-enable features such as the LEDs, potentiometer, and touch button for future projects.
