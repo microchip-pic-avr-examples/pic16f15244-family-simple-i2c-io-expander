@@ -20,7 +20,7 @@ This code example demonstrates the use of the PIC16F15244 family of parts to bui
 
 ### Common Components
 
-* <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ADM00559?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C_IOExpander"> I<sup>2</sup>C Master Device (or for easy testing, an MCP2221A USB-UART/I<sup>2</sup>C breakout module, PN: ADM00559)</a>
+* <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ADM00559?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C_IOExpander"> I<sup>2</sup>C Controller Device (or for easy testing, an MCP2221A USB-UART/I<sup>2</sup>C breakout module, PN: ADM00559)</a>
 
 ### With the PIC16F15244 family part on a Curiosity LPC Board
 
@@ -49,7 +49,7 @@ Many of the RCx pins are used for other functions on the board. For proper opera
 <img src="images/schematic.png" width="500px"><br>
 *Figure 1 - Electrical Configuration of device. Shown with Address Lines tied to GND.*<br>
 
-On the PIC16-152, the default positions for the pins and ports are:
+On the device, the default positions for the pins and ports are:
 
 | Function  | Pin or PORT
 | --------- | ----
