@@ -22,18 +22,19 @@ This code example demonstrates the use of the PIC16F15244 family of parts to bui
 
 * <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/ADM00559?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C_IOExpander"> I<sup>2</sup>C Controller Device (or for easy testing, an MCP2221A USB-UART/I<sup>2</sup>C breakout module, PN: ADM00559)</a>
 
+**Important:** Before powering up this demo, validate both devices are running at the same Vdd or damage may occur!
+
 ### With the PIC16F15244 family part on a Curiosity LPC Board
 
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C_IOExpander"> Microchip Low Pin Count Curiosity, PN: DM164137 (Rev 4)</a><br><br>
 
-**Important:**<br>
-Many of the RCx pins are used for other functions on the board. For proper operation on all pins, it is recommended to remove the small jumpers on the back of the board correlating to these features. Soldering pin headers to the nearby unpopulated area will allow 2x1 jumpers to re-enable features such as the LEDs, potentiometer, and touch button for future projects.
+**Important:** Many of the RCx pins are connected to components (such as LEDs, touch buttons, or the on-board potentiometer). Removing the small surface-mount jumpers (located on the back of the board) will disconnect these elements from the circuit. Soldering a pin header to the nearby unpopulated header will allow 2x1 pin jumpers to selectively enable these elements in the future.
 
 ### With the Curiosity Nano (PIC16F15244)
 
 * <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/EV09Z19A?utm_source=github&utm_medium=text&utm_campaign=pic152xx&utm_content=MCU8_MMTCha_simpleI2C_IOExpander"> Microchip Curiosity Nano, PN: EV09Z19A</a>
 
-**Important:** The debugger UART TX trace may interfere with the I/O Expander in some cases. Cutting this trace (located on the underside of the Nano) will resolve the issue.
+**Important:** The debugger UART TX trace may interfere with the I/O Expander in some cases. Cutting this trace (located on the underside of the Nano) will resolve the issue. The UART TX line can be externally connected from pin 4 of the Nano to the desired I/O line for future projects. Please see the [Nano User Guide](https://www.microchip.com/DevelopmentTools/ProductDetails/EV09Z19A) for more information.
 
 ### Solution Setup
 
