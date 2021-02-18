@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15244-family-simple-i2c-io-expander",
-        "version": "1.2.0",
+        "version": "1.2.1",
         "displayName": "Simple I/O Expander with PIC16F15244 Family",
         "projectName": "pic16f15244-family-simple-i2c-io-expander",
         "shortDescription": "PIC16F15244 family - Simple I2C controlled I/O Expander",
