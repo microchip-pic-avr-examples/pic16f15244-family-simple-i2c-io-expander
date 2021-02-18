@@ -22,10 +22,6 @@
             "name": "PIC16F1xxxx_DFP",
             "semverRange": "^1.4.119"
         },
-        "configurator": {
-            "name": "MCC",
-            "semverRange": ">=3.95.0"
-        },
         "device": {
             "metaDataVersion": "1.0.0",
             "category": "com.microchip.portal.contentRef",
@@ -38,7 +34,6 @@
         },
         "author": "Microchip",
         "subcategories": [
-            "MCC",
             [
                "Peripherals", "MSSP"
             ],
