@@ -2,9 +2,9 @@
     "metaDataVersion": "1.0.0",
     "category": "com.microchip.ide.project",
     "content": {
-        "metaDataVersion": "1.1.0",
+        "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15244-family-simple-i2c-io-expander",
-        "version": "1.2.1",
+        "version": "1.2.2",
         "displayName": "Simple I/O Expander with PIC16F15244 Family",
         "projectName": "pic16f15244-family-simple-i2c-io-expander",
         "shortDescription": "PIC16F15244 family - Simple I2C controlled I/O Expander",
@@ -32,15 +32,7 @@
                 "versionRange": "*"
             }
         },
-        "author": "Microchip",
-        "subcategories": [
-            [
-               "Peripherals", "MSSP"
-            ],
-            [
-               "Peripherals", "IOC"
-            ]
-        ],
+        "author": "Robert Perkel",
         "peripherals": [
             "MSSP",  "IOC"
         ],
